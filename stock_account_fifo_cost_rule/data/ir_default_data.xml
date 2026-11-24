@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 INVITU (<https://www.invitu.com>)
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo noupdate="1">
+    <function
+        model="ir.default"
+        name="set"
+        eval="('product.category', 'property_fifo_cost_rule', 'average')"
+    />
+</odoo>

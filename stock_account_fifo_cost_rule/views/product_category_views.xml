@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 INVITU (<https://www.invitu.com>)
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="product_category_view_form" model="ir.ui.view">
+        <field name="model">product.category</field>
+        <field
+            name="inherit_id"
+            ref="stock_account.view_category_property_form_stock"
+        />
+        <field name="arch" type="xml">
+            <field name="property_cost_method" position="after">
+                <field
+                    name="property_fifo_cost_rule"
+                    invisible="property_cost_method != 'fifo'"
+                    required="property_cost_method == 'fifo'"
+                />
+            </field>
+        </field>
+    </record>
+</odoo>
